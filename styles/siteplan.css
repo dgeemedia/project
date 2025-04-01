@@ -1,0 +1,101 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #022142;   /* Blue for accents */
+    --secondary-color: #F18F01; /* Green for highlights */
+    --bg-color: #ffffff;        /* White background */
+    --text-color: #333;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+  }
+  
+  /* Basic Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+  }
+  header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Main Content */
+  main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  /* Section Headings */
+  h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin: 20px 0 10px;
+  }
+  
+  /* Section Content */
+  section {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  /* Lists */
+  ul {
+    margin-left: 20px;
+  }
+  
+  /* Figures for Wireframes */
+  figure {
+    margin: 10px 0;
+    text-align: center;
+  }
+  figcaption {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+  }
+  footer a {
+    color: var(--bg-color);
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments (if needed) */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
