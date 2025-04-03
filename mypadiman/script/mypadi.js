@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginForm) {
       loginForm.addEventListener('submit', handleLogin);
     }
+
+    // --- Dynamic Creation of Login and Register Buttons in the Hero Section ---
+    const heroButtonsContainer = document.querySelector('.hero-buttons');
+    if (heroButtonsContainer) {
+        // Create Login button
+        const loginBtn = document.createElement('a')
+        loginBtn.href = "login.html";
+        loginBtn.className = "btn";
+        loginBtn.textContent = "Login";
+        heroButtonsContainer.appendChild(loginBtn);
+
+        // Create Register button
+        const registerBtn = document.createElement('a')
+        registerBtn.href = "register.html";
+        registerBtn.className = "btn";
+        registerBtn.textContent = "register";
+        heroButtonsContainer.appendChild(registerBtn);
+
+    }
   
     // --- Hero Slider Functionality ---
     const slides = document.querySelectorAll('.hero-slider .slide');
