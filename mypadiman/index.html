@@ -2,70 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyPadiMan - Home</title>
-  <link rel="stylesheet" href="styles/mypadi.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo">
-      <img src="images/logo.webp" alt="MyPadiMan Logo" loading="lazy" />
-      <span>MyPadiMan</span>
+      <img src="images/logo.webp" alt="MyPadiMan Logo" />
     </div>
-    <nav>
+    <nav class="desktop-nav">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="errands.html">Errands/Artisans</a></li>
-        <li><a href="marketplace.html">Marketplace</a></li>
-        <li><a href="wallet.html">Wallet</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="reference.html">References</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+    </nav>
+
+    <button id="menu-button">☰</button>
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a></li>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section with fading slider -->
+  <!-- Hero Banner -->
   <section class="hero">
-    <div class="hero-slider">
-      <img src="images/hero1.jpg" class="slide active" alt="Community Image 1" loading="lazy" />
-      <img src="images/hero2.jpg" class="slide" alt="Community Image 2" loading="lazy" />
-      <img src="images/hero3.jpg" class="slide" alt="Community Image 3" loading="lazy" />
+    <div class="slider">
+      <img src="images/banner1.jpg" alt="Banner 1" class="slide active" loading="lazy" />
+      <img src="images/banner2.jpeg" alt="Banner 2" class="slide" loading="lazy" />
+      <img src="images/banner3.jpeg" alt="Banner 3" class="slide" loading="lazy" />
     </div>
-    <div class="hero-content">
-      <h1>Welcome to MyPadiMan</h1>
-      <p>Your dynamic marketplace for errands, artisans, and local businesses.</p>
-      <div class="hero-buttons"></div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="feature">
-      <img src="images/hero1.jpg" alt="Errands & Artisans" loading="lazy" />
-      <h2>Errands & Artisans</h2>
-      <p>Request tasks and hire skilled artisans near you.</p>
-      <a href="errands.html" class="btn">Learn More</a>
-    </div>
-    <div class="feature">
-      <img src="images/hero2.jpg" alt="Business Marketplace" loading="lazy" />
-      <h2>Business Marketplace</h2>
-      <p>Shop from local businesses and enjoy secure payments.</p>
-      <a href="marketplace.html" class="btn">Learn More</a>
-    </div>
-    <div class="feature">
-      <img src="images/hero3.jpg" alt="Wallet & Payments" loading="lazy" />
-      <h2>Wallet & Payments</h2>
-      <p>Load funds, make payments, and manage transactions easily.</p>
-      <a href="wallet.html" class="btn">Learn More</a>
+    <div class="hero-text">
+      <h1>Your Trusted Partner for Errands & Services</h1>
+      <p>Post tasks, hire artisans, shop local, and pay securely.</p>
     </div>
   </section>
 
-  <footer>
+  <!-- Main Content Sections -->
+  <main>
+    <!-- Link to Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<main>
+  <!-- Errands & Artisans -->
+  <section class="service-section">
+    <h2>Errands & Artisans</h2>
+    <img src="images/errand.jpeg" alt="Task Helper" class="section-image">
+    <p class="section-description">
+      Post errands like delivery, repairs, and tasks. Hire verified local artisans to get things done faster and better.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='register.html'"><i class="fas fa-plus-circle"></i> Post Task</button>
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-user-cog"></i> Hire Artisan</button>
+    </div>
+  </section>
+
+  <!-- Business Marketplace -->
+  <section class="service-section">
+    <h2>Business Marketplace</h2>
+    <img src="images/marketplace.jpeg" alt="Shops" class="section-image">
+    <p class="section-description">
+      Discover nearby businesses, shop local products, and support small businesses in your community.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-store"></i> Browse Local Shops</button>
+    </div>
+  </section>
+
+  <!-- Wallet & Payments -->
+  <section class="service-section">
+    <h2>Wallet & Payments</h2>
+    <img src="images/wallet.jpeg" alt="Wallet" class="section-image">
+    <p class="section-description">
+      Load funds to your MyPadiMan wallet, make secure payments, and track your transaction history.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-wallet"></i> Load Funds</button>
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-file-invoice-dollar"></i> View Transactions</button>
+    </div>
+  </section>
+
+  <!-- User Dashboard -->
+  <section class="service-section">
+    <h2>User Dashboard</h2>
+    <img src="images/dashboard.jpg" alt="Dashboard" class="section-image">
+    <p class="section-description">
+      Track your tasks, manage messages, edit your profile, and keep everything organized in your dashboard.
+    </p>
+    <div class="buttons">
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-clipboard-list"></i> My Orders</button>
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-comments"></i> Messages</button>
+      <button onclick="location.href='dashboard.html'"><i class="fas fa-user"></i> Profile</button>
+    </div>
+  </section>
+</main>
+
+<!-- Mobile Bottom Navigation -->
+<footer class="mobile-footer">
+  <button onclick="location.href='index.html'"><i class="fas fa-home"></i><br>Home</button>
+  <button onclick="location.href='register.html'"><i class="fas fa-tasks"></i><br>Task</button>
+  <button onclick="location.href='dashboard.html'"><i class="fas fa-store-alt"></i><br>Market</button>
+  <button onclick="location.href='dashboard.html'"><i class="fas fa-wallet"></i><br>Wallet</button>
+</footer>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation -->
+  <footer class="mobile-footer">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='register.html'">Task</button>
+    <button onclick="location.href='dashboard.html'">Market</button>
+    <button onclick="location.href='dashboard.html'">Wallet</button>
+  </footer>
+
+  <!-- Desktop Footer -->
+  <footer class="desktop-footer">
     <p>&copy; 2025 MyPadiMan. <a href="reference.html">References</a></p>
   </footer>
 
-  <script src="script/mypadi.js" defer></script>
+  <script src="js/slider.js"></script>
+  <script src="js/menu.js"></script>
 </body>
 </html>

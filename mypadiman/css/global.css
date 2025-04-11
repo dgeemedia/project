@@ -1,0 +1,262 @@
+/* css/global.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  header .logo img {
+    height: 40px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Base nav styles */
+.desktop-nav ul,
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop nav */
+.desktop-nav {
+  display: none;
+}
+
+.desktop-nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+}
+
+.desktop-nav ul li a {
+  color: white;
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.desktop-nav ul li a:hover {
+  background-color: #444;
+}
+
+/* Mobile Header (Logo + Hamburger) */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 1rem;
+  position: relative;
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.mobile-footer button {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-footer button {
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+/* Mobile nav - hidden by default */
+#menu-button {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background: #222;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #444;
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: block;
+  }
+
+  .hamburger,
+  .mobile-nav,
+  .mobile-header,
+  #menu-button,   
+  #nav-menu
+  {
+    display: none !important;
+  }
+}
+
+/* Section Layout */
+.service-section {
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+  text-align: center;
+}
+
+.section-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border: none;
+  background-color: #1e90ff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttons button:hover {
+  background-color: #0077cc;
+}
+
+/* Mobile Footer */
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.mobile-footer button {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-footer button i {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
